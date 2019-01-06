@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Planning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <table id="planning" class="table is-bordered is-striped is-hoverable is-fullwidth">
+        <thead>
+            <th>
+            <td>Lundi</td>
+            <td>Mardi</td>
+            <td>Mercredi</td>
+            <td>Jeudi</td>
+            <td>Vendredi</td>
+            <td>Samedi</td>
+            <td>Dimanche</td>
+            </th>
+        </thead>
+        <tr>
+            <td>07:00 - 08:00</td>
+            <td>4</td>
+            <td>8</td>
+            <td>10</td>
+            <td>10</td>
+            <td>15</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>08:00 - 09:00</td>
+            <td>5</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>09:00 - 10:00</td>
+            <td>3</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>10:00 - 11:00</td>
+            <td>3</td>
+            <td>3</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>11:00 - 12:00</td>
+            <td>4</td>
+            <td>4</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>13:00 - 14:00</td>
+            <td>4</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>14:00 - 15:00</td>
+            <td>4</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>16:00 - 17:00</td>
+            <td>4</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>17:00 - 18:00</td>
+            <td>4</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>18:00 - 19:00</td>
+            <td>4</td>
+            <td>8</td>
+            <td>10</td>
+            <td>0</td>
+            <td>15</td>
+            <td>20</td>
+            <td>8</td>
+        </tr>
+    </table>
+
+    <script>
+        
+        function changeColor(td, ppl){
+            if (ppl < 7) {
+                td.classList.toggle('has-background-primary');
+                
+            }else if (ppl < 15) {
+                td.classList.toggle('has-background-warning');
+                
+            } else if(ppl < 50) {
+                td.classList.toggle('has-background-danger');
+                
+            }
+        }
+
+        var table = document.getElementById("planning");
+
+        for(var j = 0; j < table.children[1].children.length; j++){
+            for (var i = 0; i < table.children[1].children[j].children.length; i++) {
+                changeColor(
+                    table.children[1].children[j].children[i],
+                     table.children[1].children[j].children[i].innerText
+                );
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
