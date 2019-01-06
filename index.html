@@ -1,12 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>Gestion materiel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
+
 <body>
-    
+
+    <section class="section">
+        <div class="container ">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        List des materiel
+                    </p>
+                    <a href="#" class="card-header-icon" aria-label="more options">
+                        <span class="icon is-medium">
+                            <i class="fas fa-lg fa-plus-square" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr class="is-selected">
+                                    <th>Id</th>
+                                    <th>Type</th>
+                                    <th>Fournisseur</th>
+                                    <th>Date Livraison</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Oridinateur</td>
+                                    <td>Fournisseur01</td>
+                                    <td>23/01/2018</td>
+                                    <td>
+                                        <div class="buttons is-centered">
+                                            <a class="button is-info" onclick="showInfo(1);" href="#"><i class="fas fa-edit"></i></a>
+                                            <a class="button is-danger" href="#"><i class="fas fa-trash-alt"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Imprimante</td>
+                                    <td>Fournisseur02</td>
+                                    <td>20/12/2018</td>
+                                    <td>
+                                        <div class="buttons is-centered">
+                                            <a class="button is-info" onclick="showInfo(2);" href="#"><i class="fas fa-edit"></i></a>
+                                            <a class="button is-danger" href="#"><i class="fas fa-trash-alt"></i></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h1 class="title">
+                Ajouter un materiel
+            </h1>
+        </div>
+    </section>
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth has-background-light">
+            <div class="field">
+                <label class="label">Label</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">informations supplementaires</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Textarea"></textarea>
+
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Cv</label>
+                <div class="file has-name is-fullwidth is-primary">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Choose a file…
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            Screen Shot 2017-07-29 at 15.54.25.png
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                    <label class="label">Subject</label>
+                    <div class="control">
+                      <div class="select">
+                        <select>
+                          <option>Select dropdown</option>
+                          <option>With options</option>
+                        </select>
+                      </div>
+                    </div>
+            </div>
+            <div class="field">
+                <label class="label">Label</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field is-grouped is-grouped-right">
+                <p class="control">
+                    <a class="button is-primary">
+                        Submit
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-light">
+                        Cancel
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container">
+            <h2 class="title">
+                Candidature Moniteur
+            </h2>
+        </div>
+    </section>
+    <div class="columns">
+        <div class="column is-three-fifths is-offset-one-fifth has-background-light">
+            <div class="field">
+                <label class="label">Nom</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Prenom</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Text input">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">informations supplementaires</label>
+                <div class="control">
+                    <textarea class="textarea" placeholder="Textarea"></textarea>
+
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Cv</label>
+                <div class="file has-name is-fullwidth is-primary">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Choose a file…
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            Screen Shot 2017-07-29 at 15.54.25.png
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">lettre de motivation</label>
+                <div class="file has-name is-fullwidth is-primary">
+                    <label class="file-label">
+                        <input class="file-input" type="file" name="resume">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Choose a file…
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            Screen Shot 2017-07-29 at 15.54.25.png
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="field is-grouped is-grouped-right">
+                <p class="control">
+                    <a class="button is-primary">
+                        Submit
+                    </a>
+                </p>
+                <p class="control">
+                    <a class="button is-light">
+                        Cancel
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <section class="section">
+        <div class="container ">
+            <div class="card">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        List des candidatures
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                            <thead>
+                                <tr class="is-selected">
+                                    <th>Id</th>
+                                    <th>Type</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>1</th>
+                                    <td>Oridinateur</td>
+                                    <td>
+                                        <div class="buttons is-centered">
+                                            <a class="button is-info" onclick="showInfo(1);" href="#">Accepter</a>
+                                            <a class="button is-danger" href="#">Refuser</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>2</th>
+                                    <td>Imprimante</td>
+                                    <td>
+                                        <div class="buttons is-centered">
+                                            <a class="button is-info" onclick="showInfo(2);" href="#">Accepter</a>
+                                            <a class="button is-danger" href="#">Refuser</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Modal title</p>
+                <button class="delete" aria-label="close" onclick="showInfo();"></button>
+            </header>
+            <section class="modal-card-body">
+                <div id="modal-info-field"></div>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-success">Save changes</button>
+                <button class="button">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function showInfo(id) {
+            var modal = document.getElementById('modal');
+            modal.classList.toggle('is-active');
+            var field = document.getElementById('modal-info-field');
+            field.innerHTML = "<b>Id: " + id + "</b>";
+        }
+    </script>
 </body>
+
 </html>
