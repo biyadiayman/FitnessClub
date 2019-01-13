@@ -2,301 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gestion materiel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FITSPARK</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.css" />
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <style>
+    .has-bg-img {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.0), rgba(0, 0, 0, 1.5)), url("resources/images/ropeWorkout.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-color: #999;
+    }
+  </style>
 </head>
 
 <body>
 
-    <h2 align='center'><b>WIP</b></h2>
-    <!--
-    <section class="section">
-        <div class="container ">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        List des materiel
-                    </p>
-                    <a href="#" class="card-header-icon" aria-label="more options">
-                        <span class="icon is-medium">
-                            <i class="fas fa-lg fa-plus-square" aria-hidden="true"></i>
-                        </span>
-                    </a>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                            <thead>
-                                <tr class="is-selected">
-                                    <th>Id</th>
-                                    <th>Type</th>
-                                    <th>Fournisseur</th>
-                                    <th>Date Livraison</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Oridinateur</td>
-                                    <td>Fournisseur01</td>
-                                    <td>23/01/2018</td>
-                                    <td>
-                                        <div class="buttons is-centered">
-                                            <a class="button is-info" onclick="showInfo(1);" href="#"><i class="fas fa-edit"></i></a>
-                                            <a class="button is-danger" href="#"><i class="fas fa-trash-alt"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Imprimante</td>
-                                    <td>Fournisseur02</td>
-                                    <td>20/12/2018</td>
-                                    <td>
-                                        <div class="buttons is-centered">
-                                            <a class="button is-info" onclick="showInfo(2);" href="#"><i class="fas fa-edit"></i></a>
-                                            <a class="button is-danger" href="#"><i class="fas fa-trash-alt"></i></a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
+  <section class="hero is-dark is-fullheight has-bg-img">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar">
         <div class="container">
-            <h1 class="title">
-                Ajouter un materiel
-            </h1>
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="resources/images/fitsparkLogo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item is-active">
+                Home
+              </a>
+              <a class="navbar-item" href="#about">
+                about
+              </a>
+              <a class="navbar-item" href="#packs">
+                Packs
+              </a>
+              <a class="navbar-item">
+                Espace membre
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
-    <div class="columns">
-        <div class="column is-three-fifths is-offset-one-fifth has-background-light">
-            <div class="field">
-                <label class="label">Label</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">informations supplementaires</label>
-                <div class="control">
-                    <textarea class="textarea" placeholder="Textarea"></textarea>
-
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Cv</label>
-                <div class="file has-name is-fullwidth is-primary">
-                    <label class="file-label">
-                        <input class="file-input" type="file" name="resume">
-                        <span class="file-cta">
-                            <span class="file-icon">
-                                <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">
-                                Choose a file…
-                            </span>
-                        </span>
-                        <span class="file-name">
-                            Screen Shot 2017-07-29 at 15.54.25.png
-                        </span>
-                    </label>
-                </div>
-            </div>
-            <div class="field">
-                    <label class="label">Subject</label>
-                    <div class="control">
-                      <div class="select">
-                        <select>
-                          <option>Select dropdown</option>
-                          <option>With options</option>
-                        </select>
-                      </div>
-                    </div>
-            </div>
-            <div class="field">
-                <label class="label">Label</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-            </div>
-            <div class="field is-grouped is-grouped-right">
-                <p class="control">
-                    <a class="button is-primary">
-                        Submit
-                    </a>
-                </p>
-                <p class="control">
-                    <a class="button is-light">
-                        Cancel
-                    </a>
-                </p>
-            </div>
-        </div>
+      </nav>
     </div>
-    <section class="section">
-        <div class="container">
-            <h2 class="title">
-                Candidature Moniteur
-            </h2>
-        </div>
-    </section>
-    <div class="columns">
-        <div class="column is-three-fifths is-offset-one-fifth has-background-light">
-            <div class="field">
-                <label class="label">Nom</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Prenom</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Text input">
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">informations supplementaires</label>
-                <div class="control">
-                    <textarea class="textarea" placeholder="Textarea"></textarea>
 
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">Cv</label>
-                <div class="file has-name is-fullwidth is-primary">
-                    <label class="file-label">
-                        <input class="file-input" type="file" name="resume">
-                        <span class="file-cta">
-                            <span class="file-icon">
-                                <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">
-                                Choose a file…
-                            </span>
-                        </span>
-                        <span class="file-name">
-                            Screen Shot 2017-07-29 at 15.54.25.png
-                        </span>
-                    </label>
-                </div>
-            </div>
-            <div class="field">
-                <label class="label">lettre de motivation</label>
-                <div class="file has-name is-fullwidth is-primary">
-                    <label class="file-label">
-                        <input class="file-input" type="file" name="resume">
-                        <span class="file-cta">
-                            <span class="file-icon">
-                                <i class="fas fa-upload"></i>
-                            </span>
-                            <span class="file-label">
-                                Choose a file…
-                            </span>
-                        </span>
-                        <span class="file-name">
-                            Screen Shot 2017-07-29 at 15.54.25.png
-                        </span>
-                    </label>
-                </div>
-            </div>
-            <div class="field is-grouped is-grouped-right">
-                <p class="control">
-                    <a class="button is-primary">
-                        Submit
-                    </a>
-                </p>
-                <p class="control">
-                    <a class="button is-light">
-                        Cancel
-                    </a>
-                </p>
-            </div>
-        </div>
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title">
+          Prêt à changer votre physique ?
+        </h1>
+        <a class="button is-large is-warning">Rejoindre le mouvement</a>
+      </div>
     </div>
-    <section class="section">
-        <div class="container ">
-            <div class="card">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        List des candidatures
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content">
-                        <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-                            <thead>
-                                <tr class="is-selected">
-                                    <th>Id</th>
-                                    <th>Type</th>
-                                    <th>Actions</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Oridinateur</td>
-                                    <td>
-                                        <div class="buttons is-centered">
-                                            <a class="button is-info" onclick="showInfo(1);" href="#">Accepter</a>
-                                            <a class="button is-danger" href="#">Refuser</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Imprimante</td>
-                                    <td>
-                                        <div class="buttons is-centered">
-                                            <a class="button is-info" onclick="showInfo(2);" href="#">Accepter</a>
-                                            <a class="button is-danger" href="#">Refuser</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  </section>
 
-    <div class="modal" id="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-            <header class="modal-card-head">
-                <p class="modal-card-title">Modal title</p>
-                <button class="delete" aria-label="close" onclick="showInfo();"></button>
+  <!-- .section -->
+  <section id="about" class="section has-background-dark">
+    <div class="container">
+      <h1 class="title is-1 has-text-white has-text-centered">À Propos de nous</h1>
+      <div class="columns">
+        <div class="column">
+          <article class="media notification ">
+            <figure class="media-left">
+              <span class="icon is-medium">
+                <i class="fas fa-dumbbell fa-2x"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">GYM</h1>
+                <p class="is-size-5">
+                  <b>FITSPARK</b> met en votre disposition un ensemble de materiel pour un entrainement réussi ! 💪️‍
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column">
+          <article class="media notification is-info">
+            <figure class="media-left">
+              <span class="icon is-medium">
+                <i class="fas fa-swimmer fa-2x"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Piscine</h1>
+                <p class="is-size-5">
+                  <b>FITSPARK</b> dispose aussi d'une grande piscine pour diversifier vos entrainements et vous aidez a
+                  mieux récuperer 🏊‍
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="column">
+          <article class="media notification is-primary">
+            <figure class="media-left">
+              <span class="icon is-medium">
+                <i class="fas fa-users fa-2x"></i>
+              </span>
+            </figure>
+            <div class="media-content">
+              <div class="content">
+                <h1 class="title is-size-4">Equipe</h1>
+                <p class="is-size-5">
+                  <b>FITSPARK</b> croit au travail d'equipe, et vous aide à atteindre vos <b>GOALS</b> 🏋️‍🏆
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /.section -->
+
+  <!-- .section -->
+  <section id="packs" class="section has-background-light">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered">Nos Packs</h1>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Pack Love
+              </p>
             </header>
-            <section class="modal-card-body">
-                <div id="modal-info-field"></div>
-            </section>
-            <footer class="modal-card-foot">
-                <button class="button is-success">Save changes</button>
-                <button class="button">Cancel</button>
+            <div class="card-content">
+              <div class="content">
+                Full access à la salle ! <br>
+                <hr>
+                Fiche d'entrainement ! <br>
+                <hr>
+                Cours collectifs !
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Choisir</a>
             </footer>
+          </div>
         </div>
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                Pack GYMAHOLIC
+              </p>
+            </header>
+            <div class="card-content">
+              <div class="content">
+                Full access à la salle ! <br>
+                <hr>
+                Access a la piscine ! <br>
+                <hr>
+                Cours collectifs ! <br>
+                <hr>
+                Sac et serviette offertes ! <br>
+                <hr>
+                Fiche d'entrainement ! <br>
+                <hr>
+                Programme personalisé ! <br>
+                <hr>
+                blablableuh !
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a href="#" class="card-footer-item">Choisir</a>
+            </footer>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  <!-- /.section -->
 
-    <script>
-        function showInfo(id) {
-            var modal = document.getElementById('modal');
-            modal.classList.toggle('is-active');
-            var field = document.getElementById('modal-info-field');
-            field.innerHTML = "<b>Id: " + id + "</b>";
-        }
-    </script>
-    -->
+  <!-- FOOTER -->
+  <footer class="footer has-text-white has-background-dark">
+    <div class="content has-text-centered ">
+      <p>
+        <b>FIT<span class="has-text-warning">SPARK</span></b> by <u><b><a href="http://biyadiayman.com" class="has-text-white">THE
+              DREAM TEAM</a></b></u>
+      </p>
+    </div>
+  </footer>
+  <!-- FOOTER -->  
+
+  <!-- NAVBAR -->
+  <script type="text/javascript">
+    (function () {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      })
+    })();
+  </script>
+  <!-- NAVBAR -->
 </body>
 
 </html>
