@@ -51,7 +51,7 @@
               <a class="navbar-item" href="actu.html">
                 Actualité
               </a>
-              <a class="navbar-item">
+              <a class="navbar-item" onclick="showInfo();">
                 Espace membre
               </a>
             </div>
@@ -202,19 +202,62 @@
       </p>
     </div>
   </footer>
-  <!-- FOOTER -->  
+  <!-- FOOTER -->
+
+  <!-- Modal Modify -->
+  <div class="modal" id="modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Login</p>
+        <button class="delete" aria-label="close" onclick="showInfo();"></button>
+      </header>
+      <section class="modal-card-body">
+        <div id="modal-info-field"></div>
+
+        <div class="field">
+          <span id="modal-info-field"></span>
+        </div>
+
+        <div class="field">
+          <label class="label">UserName</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Mot de Passe</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Text input">
+          </div>
+        </div>
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success">Login</button>
+        <button class="button">Sign up</button>
+        <button class="button is-text">mot de passe oublié ?</button>
+      </footer>
+    </div>
+  </div>
+  <!-- Modal Modify -->
 
   <!-- NAVBAR -->
   <script type="text/javascript">
     (function () {
       var burger = document.querySelector('.burger');
-      var nav = document.querySelector('#'+burger.dataset.target);
+      var nav = document.querySelector('#' + burger.dataset.target);
 
       burger.addEventListener('click', function () {
         burger.classList.toggle('is-active');
         nav.classList.toggle('is-active');
       })
     })();
+
+    function showInfo(id) {
+      var modal = document.getElementById('modal');
+      modal.classList.toggle('is-active');
+    }
   </script>
   <!-- NAVBAR -->
 </body>
